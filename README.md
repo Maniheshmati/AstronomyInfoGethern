@@ -5,3 +5,8 @@ RUN the solarSystem.py file with pyhton and enter any name you want.
 
 
 API: Solar System OpenData link: https://api.le-systeme-solaire.net/
+
+Libraries: 
+  requests
+
+
