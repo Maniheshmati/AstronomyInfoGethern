@@ -2,7 +2,7 @@ import requests
 
 
 def appOps():
-    userInput = input("Enter yout Planer, moon etc... name: ")
+    userInput = input("Enter yout Planet, moon,dwarf planet etc... name: ")
     apiLink = f'https://api.le-systeme-solaire.net/rest.php/bodies/{userInput}' 
     r = requests.get(apiLink)
     
