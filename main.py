@@ -1,10 +1,6 @@
 import requests
 import inquirer
 
-
-
-
-
 def mainApp():
     global answer
     questions = [ inquirer.List('userSelection',
@@ -16,7 +12,6 @@ def mainApp():
     
     if answer['userSelection'] == 'space natural things':
         spaceNaturalThings()
-
     
 def spaceNaturalThings():
     moon = []
@@ -50,11 +45,9 @@ def spaceNaturalThings():
         elif userAnswer['userSelectionPlanet'] == 'object type':
             print(typeOfObject)
         
-
     else:
         print(r.status_code)
         print("\n There was an error. try again later... \n")
         spaceNaturalThings()
-
 
 mainApp()
