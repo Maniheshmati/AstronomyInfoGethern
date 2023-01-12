@@ -8,6 +8,7 @@ def appOps():
     r = requests.get(apiLink)
     
     if r.status_code == 200:
+        global latinName
         latinName = r.json()['name']
         name = r.json()['englishName']
         isPlanet = r.json()['isPlanet']
@@ -15,11 +16,17 @@ def appOps():
         for i in moons:
             moon.append(i['moon'])
         typeOfObject = r.json()['bodyType']
-        print(f"Latin Name: {latinName}\nEnglish Name: {name}\nis Planet: {isPlanet}\nmoons: {moon}\nType Of Object: {typeOfObject}")
+        # print(f"Latin Name: {latinName}\nEnglish Name: {name}\nis Planet: {isPlanet}\nmoons: {moon}\nType Of Object: {typeOfObject}")
 
     else:
-        print(r.status_code)
-        print("\n There was an error. try again later... \n")
-        appOps()
+        # print(r.status_code)
+        # print("\n There was an error. try again later... \n")
+        # appOps()
+        pass
 
-appOps()
+
+def mainApp():
+    appOps()
+    print(latinName)
+
+mainApp()
