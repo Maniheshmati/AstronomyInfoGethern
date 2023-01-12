@@ -6,6 +6,9 @@ dependencies:
   2. requests
 
 installaation:
+```
 pip install requests
-
+```
+```
 pip install inquirer
+```
