@@ -9,9 +9,9 @@ def mainApp():
             ),
 ]
     answer = inquirer.prompt(questions)
-    
-    if answer['userSelection'] == 'space natural things':
-        spaceNaturalThings()
+    if answer != None:
+        if answer['userSelection'] == 'space natural things':
+            spaceNaturalThings()
     
 def spaceNaturalThings():
     moon = []
@@ -39,11 +39,20 @@ def spaceNaturalThings():
         userAnswer = inquirer.prompt(questions)
         
         if userAnswer['userSelectionPlanet'] == 'name':
+            print("\n")
             print(name)
+            print("\n")
+            mainApp()
         elif userAnswer['userSelectionPlanet'] == 'moons':
+            print("\n")
             print(moon)
+            print("\n")
+            mainApp()
         elif userAnswer['userSelectionPlanet'] == 'object type':
+            print("\n")
             print(typeOfObject)
+            print("\n")
+            mainApp()
         
     else:
         print(r.status_code)
