@@ -30,3 +30,4 @@ def mainApp():
     print(latinName)
 
 mainApp()
+print("Done")
